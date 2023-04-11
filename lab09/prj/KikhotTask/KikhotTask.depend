@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1681228305 source:d:\university\bmtp\git\kikhot-maksym-kn22\lab09\prj\kikhottask\kikhotmodules.h
+	<string>
+
+1681228584 source:d:\university\bmtp\git\kikhot-maksym-kn22\lab09\prj\kikhottask\kikhottask.cpp
+	<iostream>
+	<locale>
+	<windows.h>
+	"KikhotModules.h"
+
+1681228305 d:\university\bmtp\git\kikhot-maksym-kn22\lab09\prj\kikhottask\kikhotmodules.h
+	<string>
+

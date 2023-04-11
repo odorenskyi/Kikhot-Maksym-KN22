@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1681228305 source:d:\university\bmtp\git\kikhot-maksym-kn22\lab09\prj\kikhotmodules\kikhotmodules.cpp
+	<cmath>
+	<string>
+	<iostream>
+
