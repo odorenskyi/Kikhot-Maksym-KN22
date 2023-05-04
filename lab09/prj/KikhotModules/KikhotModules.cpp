@@ -95,3 +95,62 @@ string function_9_3(int n)
         return result;
     }
 }
+
+void function_10_1()
+{
+    fstream output;
+    output.open("D:\\University\\BMTP\\Git\\Kikhot-Maksym-KN22\\lab10\\prj\\output.txt", ios_base::out);
+    output << "Кіхоть Максим, ЦНТУ, Кропивницький, Україна, 2023" << endl;
+
+void function_10_2(const string& filename) {
+    fstream file(filename, ios::in | ios::out);
+    if (!file) {
+        cerr << "Помилка відкриття файлу" << filename << endl;
+        return;
+    }
+
+    string content;
+    getline(file, content, '\0');
+
+    string delimiter = ".!?";
+    size_t start = 0, end = 0;
+    while ((start = content.find_first_not_of(delimiter, end)) != string::npos) {
+        end = content.find_first_of(delimiter, start);
+        if (end == string::npos) {
+            end = content.length();
+        }
+        string sentence = content.substr(start, end - start);
+        if (count_if(sentence.begin(), sentence.end(), ::isalnum) % 2 == 1) {
+            string unpaired_chars;
+            for (auto& ch : sentence) {
+                if (!isalnum(ch)) {
+                    unpaired_chars += ch;
+                }
+            }
+            file.seekp(end);
+            file << unpaired_chars << " " << endl;
+            time_t t = time(nullptr);
+            tm tm = *localtime(&t);
+            char buffer[20];
+            strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &tm);
+            file << buffer << endl;
+        }
+    }
+}
+
+
+void function_10_3(float x, float z, int b)
+{
+    fstream f;
+    f.open("D:\\University\\BMTP\\Git\\Kikhot-Maksym-KN-22\\lab10\\prj\\output.txt", ios_base::app);
+    f << s_calculation(x,z) << endl;
+    for (int i = 31; i >= 0; i--)
+    {
+        if (b & (1 << i))
+            f << "1";
+        else
+            f << "0";
+    }
+    f << endl;
+    f.close();
+}

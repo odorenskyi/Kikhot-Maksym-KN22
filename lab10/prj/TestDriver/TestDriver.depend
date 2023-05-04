@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1683212085 source:d:\university\bmtp\git\kikhot-maksym-kn22\lab10\prj\testdriver\testdriver.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<locale>
+	<string>
+	<algorithm>
+	<cctype>
+	"../../../lab09/prj/KikhotModules/KikhotModules.h"
+
+1683210107 d:\university\bmtp\git\kikhot-maksym-kn22\lab09\prj\kikhotmodules\kikhotmodules.h
+	<string>
+

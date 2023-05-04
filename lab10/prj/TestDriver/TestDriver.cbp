@@ -32,9 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Unit filename="../../../lab09/prj/KikhotModules/KikhotModules.h" />
+		<Unit filename="../../../lab09/prj/KikhotModules/bin/Debug/libKikhotModules.a" />
+		<Unit filename="TestDriver.cpp" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
